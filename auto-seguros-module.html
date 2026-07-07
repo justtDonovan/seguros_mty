@@ -1,0 +1,673 @@
+<!-- 
+  ================================================================================
+  MÓDULO DE SEGUROS DE AUTO - MONTERREY NEW YORK LIFE
+  ================================================================================
+  Propósito: Mostrar productos de seguros de auto de alta rentabilidad
+  Características basadas en investigación de mercado mexicano 2025:
+  - Coberturas flexibles (Limitada, Ampliada, Cobertura Amplia)
+  - Asistencia vial 24/7
+  - Auto sustituto
+  - Protección de deducible
+  - Red de talleres certificados
+  - Atención de siniestros ágil
+  
+  Diseño Tokens:
+  - Primarios: #153A5A, #00335B, #3073C0
+  - Neutros: #F9F8F4, #F5F5F5, #E0E0E0
+  - Tipografía: Playfair Display (headings), Montserrat (body)
+  ================================================================================
+-->
+
+<section id="auto-seguros" class="auto-seguros-section">
+  <div class="auto-seguros-container">
+    
+    <!-- Encabezado de Sección -->
+    <div class="auto-seguros-header">
+      <div class="auto-seguros-icon-wrapper">
+        <svg class="auto-seguros-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M52 28H48V24C48 21.79 46.21 20 44 20H36V16H52C54.21 16 56 17.79 56 20V24C56 26.21 54.21 28 52 28Z" fill="#3073C0"/>
+          <path d="M20 28H16C13.79 28 12 26.21 12 24V20C12 17.79 13.79 16 16 16H32V20H24V24H20V28Z" fill="#3073C0"/>
+          <rect x="8" y="32" width="48" height="16" rx="2" fill="#153A5A"/>
+          <circle cx="18" cy="50" r="6" fill="#00335B"/>
+          <circle cx="46" cy="50" r="6" fill="#00335B"/>
+          <circle cx="18" cy="50" r="3" fill="#FFFFFF"/>
+          <circle cx="46" cy="50" r="3" fill="#FFFFFF"/>
+          <path d="M12 36H52" stroke="#3073C0" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <h2 class="auto-seguros-title">SEGUROS DE AUTO</h2>
+      <p class="auto-seguros-subtitle">Protección inteligente para tu patrimonio con coberturas de alta rentabilidad</p>
+    </div>
+
+    <!-- Grid de Planes -->
+    <div class="auto-seguros-grid">
+      
+      <!-- Plan 1: Cobertura Limitada -->
+      <article class="auto-seguros-card" data-plan="limitada">
+        <div class="auto-seguros-card-header">
+          <h3 class="auto-seguros-plan-name">COBERTURA LIMITADA</h3>
+          <div class="auto-seguros-plan-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="24" cy="24" r="20" stroke="#3073C0" stroke-width="2"/>
+              <path d="M16 24L22 30L32 18" stroke="#3073C0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+        <div class="auto-seguros-card-body">
+          <ul class="auto-seguros-features">
+            <li class="auto-seguros-feature">
+              <span class="feature-check">✓</span>
+              <span>Daños a terceros</span>
+            </li>
+            <li class="auto-seguros-feature">
+              <span class="feature-check">✓</span>
+              <span>Responsabilidad civil</span>
+            </li>
+            <li class="auto-seguros-feature">
+              <span class="feature-check">✓</span>
+              <span>Gastos médicos ocupantes</span>
+            </li>
+            <li class="auto-seguros-feature">
+              <span class="feature-check">✓</span>
+              <span>Asistencia vial básica</span>
+            </li>
+            <li class="auto-seguros-feature feature-disabled">
+              <span class="feature-check disabled">✗</span>
+              <span>Auto sustituto</span>
+            </li>
+            <li class="auto-seguros-feature feature-disabled">
+              <span class="feature-check disabled">✗</span>
+              <span>Protección de deducible</span>
+            </li>
+          </ul>
+        </div>
+        <div class="auto-seguros-card-footer">
+          <button class="auto-seguros-btn auto-seguros-btn-outline" aria-label="Cotizar cobertura limitada">
+            COTIZAR AHORA
+          </button>
+        </div>
+      </article>
+
+      <!-- Plan 2: Cobertura Ampliada (DESTACADO) -->
+      <article class="auto-seguros-card auto-seguros-card-featured" data-plan="ampliada">
+        <div class="auto-seguros-featured-badge">MÁS POPULAR</div>
+        <div class="auto-seguros-card-header">
+          <h3 class="auto-seguros-plan-name">COBERTURA AMPLIADA</h3>
+          <div class="auto-seguros-plan-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="24" cy="24" r="20" fill="#3073C0"/>
+              <path d="M16 24L22 30L32 18" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+        <div class="auto-seguros-card-body">
+          <ul class="auto-seguros-features">
+            <li class="auto-seguros-feature">
+              <span class="feature-check">✓</span>
+              <span>Daños a terceros</span>
+            </li>
+            <li class="auto-seguros-feature">
+              <span class="feature-check">✓</span>
+              <span>Responsabilidad civil</span>
+            </li>
+            <li class="auto-seguros-feature">
+              <span class="feature-check">✓</span>
+              <span>Gastos médicos ocupantes</span>
+            </li>
+            <li class="auto-seguros-feature">
+              <span class="feature-check">✓</span>
+              <span>Asistencia vial 24/7</span>
+            </li>
+            <li class="auto-seguros-feature">
+              <span class="feature-check">✓</span>
+              <span><strong>Auto sustituto</strong></span>
+            </li>
+            <li class="auto-seguros-feature">
+              <span class="feature-check">✓</span>
+              <span><strong>Protección de deducible</strong></span>
+            </li>
+            <li class="auto-seguros-feature">
+              <span class="feature-check">✓</span>
+              <span>Red de talleres certificados</span>
+            </li>
+          </ul>
+        </div>
+        <div class="auto-seguros-card-footer">
+          <button class="auto-seguros-btn auto-seguros-btn-primary" aria-label="Cotizar cobertura ampliada">
+            COTIZAR AHORA
+          </button>
+        </div>
+      </article>
+
+      <!-- Plan 3: Cobertura Amplia Premium -->
+      <article class="auto-seguros-card" data-plan="amplia">
+        <div class="auto-seguros-card-header">
+          <h3 class="auto-seguros-plan-name">COBERTURA AMPLIA PREMIUM</h3>
+          <div class="auto-seguros-plan-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="24" cy="24" r="20" stroke="#3073C0" stroke-width="2"/>
+              <path d="M16 24L22 30L32 18" stroke="#3073C0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+        <div class="auto-seguros-card-body">
+          <ul class="auto-seguros-features">
+            <li class="auto-seguros-feature">
+              <span class="feature-check">✓</span>
+              <span>Todo lo de Cobertura Ampliada</span>
+            </li>
+            <li class="auto-seguros-feature">
+              <span class="feature-check">✓</span>
+              <span><strong>Daños materiales propios</strong></span>
+            </li>
+            <li class="auto-seguros-feature">
+              <span class="feature-check">✓</span>
+              <span><strong>Robo total del vehículo</strong></span>
+            </li>
+            <li class="auto-seguros-feature">
+              <span class="feature-check">✓</span>
+              <span>Vehículo de cortesía extendido</span>
+            </li>
+            <li class="auto-seguros-feature">
+              <span class="feature-check">✓</span>
+              <span>Atención prioritaria de siniestros</span>
+            </li>
+            <li class="auto-seguros-feature">
+              <span class="feature-check">✓</span>
+              <span>Cobertura en todo México</span>
+            </li>
+            <li class="auto-seguros-feature">
+              <span class="feature-check">✓</span>
+              <span>Asistencia legal especializada</span>
+            </li>
+          </ul>
+        </div>
+        <div class="auto-seguros-card-footer">
+          <button class="auto-seguros-btn auto-seguros-btn-outline" aria-label="Cotizar cobertura amplia premium">
+            COTIZAR AHORA
+          </button>
+        </div>
+      </article>
+    </div>
+
+    <!-- Beneficios Adicionales -->
+    <div class="auto-seguros-benefits">
+      <h3 class="auto-seguros-benefits-title">BENEFICIOS DE ALTA RENTABILIDAD</h3>
+      <div class="auto-seguros-benefits-grid">
+        
+        <div class="auto-seguros-benefit-item">
+          <div class="auto-seguros-benefit-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="24" cy="24" r="20" fill="#F5F5F5"/>
+              <path d="M24 14V24L30 28" stroke="#3073C0" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h4 class="auto-seguros-benefit-heading">Atención 24/7</h4>
+          <p class="auto-seguros-benefit-text">Centro de atención de siniestros disponible todos los días del año</p>
+        </div>
+
+        <div class="auto-seguros-benefit-item">
+          <div class="auto-seguros-benefit-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="24" cy="24" r="20" fill="#F5F5F5"/>
+              <rect x="14" y="18" width="20" height="12" rx="2" stroke="#3073C0" stroke-width="2"/>
+              <path d="M18 24H30" stroke="#3073C0" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h4 class="auto-seguros-benefit-heading">Auto Sustituto</h4>
+          <p class="auto-seguros-benefit-text">Vehículo de reemplazo mientras se repara el tuyo sin costo adicional</p>
+        </div>
+
+        <div class="auto-seguros-benefit-item">
+          <div class="auto-seguros-benefit-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="24" cy="24" r="20" fill="#F5F5F5"/>
+              <path d="M24 16V24L28 28" stroke="#3073C0" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="24" cy="24" r="8" stroke="#3073C0" stroke-width="2"/>
+            </svg>
+          </div>
+          <h4 class="auto-seguros-benefit-heading">Talleres Certificados</h4>
+          <p class="auto-seguros-benefit-text">Amplia red de talleres autorizados en todo el país</p>
+        </div>
+
+        <div class="auto-seguros-benefit-item">
+          <div class="auto-seguros-benefit-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="24" cy="24" r="20" fill="#F5F5F5"/>
+              <path d="M18 24L22 28L30 20" stroke="#3073C0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h4 class="auto-seguros-benefit-heading">Siniestros Ágiles</h4>
+          <p class="auto-seguros-benefit-text">Proceso de reclamación rápido y transparente</p>
+        </div>
+
+        <div class="auto-seguros-benefit-item">
+          <div class="auto-seguros-benefit-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="24" cy="24" r="20" fill="#F5F5F5"/>
+              <path d="M16 20H32L30 32H18L16 20Z" stroke="#3073C0" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M20 20V16C20 14.8954 20.8954 14 22 14H26C27.1046 14 28 14.8954 28 16V20" stroke="#3073C0" stroke-width="2"/>
+            </svg>
+          </div>
+          <h4 class="auto-seguros-benefit-heading">Protección de Deducible</h4>
+          <p class="auto-seguros-benefit-text">Opción para proteger tu deducible en caso de siniestro</p>
+        </div>
+
+        <div class="auto-seguros-benefit-item">
+          <div class="auto-seguros-benefit-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="24" cy="24" r="20" fill="#F5F5F5"/>
+              <circle cx="24" cy="24" r="10" stroke="#3073C0" stroke-width="2"/>
+              <path d="M24 18V24L28 26" stroke="#3073C0" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h4 class="auto-seguros-benefit-heading">Cobertura Nacional</h4>
+          <p class="auto-seguros-benefit-text">Protección válida en toda la República Mexicana</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- CTA Final -->
+    <div class="auto-seguros-cta">
+      <h3 class="auto-seguros-cta-title">¿Listo para proteger tu vehículo?</h3>
+      <p class="auto-seguros-cta-text">Obtén una cotización personalizada en menos de 5 minutos</p>
+      <button class="auto-seguros-btn auto-seguros-btn-large" aria-label="Solicitar cotización de seguro de auto">
+        SOLICITAR COTIZACIÓN GRATUITA
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<style>
+/* ============================================================================
+   ESTILOS DEL MÓDULO DE SEGUROS DE AUTO
+   Basados en Design Tokens de Monterrey New York Life
+   ============================================================================ */
+
+.auto-seguros-section {
+  background-color: #F9F8F4;
+  padding: var(--spacing-4xl, 96px) 0;
+  font-family: 'Montserrat', 'Open Sans', sans-serif;
+}
+
+.auto-seguros-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg, 24px);
+}
+
+/* Header */
+.auto-seguros-header {
+  text-align: center;
+  margin-bottom: var(--spacing-3xl, 64px);
+}
+
+.auto-seguros-icon-wrapper {
+  display: inline-block;
+  margin-bottom: var(--spacing-md, 16px);
+}
+
+.auto-seguros-icon {
+  width: 64px;
+  height: 64px;
+}
+
+.auto-seguros-title {
+  font-family: 'Playfair Display', 'Merriweather', Georgia, serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #153A5A;
+  margin: 0 0 var(--spacing-md, 16px) 0;
+  letter-spacing: 0.5px;
+}
+
+.auto-seguros-subtitle {
+  font-size: 18px;
+  color: #666666;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Grid de Planes */
+.auto-seguros-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-xl, 32px);
+  margin-bottom: var(--spacing-4xl, 96px);
+}
+
+.auto-seguros-card {
+  background: #FFFFFF;
+  border: 1px solid #E0E0E0;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.auto-seguros-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.auto-seguros-card-featured {
+  border: 2px solid #3073C0;
+  box-shadow: 0 4px 16px rgba(48, 115, 192, 0.2);
+}
+
+.auto-seguros-card-featured:hover {
+  box-shadow: 0 12px 32px rgba(48, 115, 192, 0.25);
+}
+
+.auto-seguros-featured-badge {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #3073C0;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: 0 0 4px 4px;
+  letter-spacing: 0.5px;
+}
+
+.auto-seguros-card-header {
+  padding: var(--spacing-xl, 32px) var(--spacing-lg, 24px);
+  text-align: center;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.auto-seguros-plan-name {
+  font-family: 'Playfair Display', 'Merriweather', Georgia, serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #153A5A;
+  margin: 0 0 var(--spacing-md, 16px) 0;
+}
+
+.auto-seguros-plan-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto;
+}
+
+.auto-seguros-card-body {
+  padding: var(--spacing-xl, 32px) var(--spacing-lg, 24px);
+}
+
+.auto-seguros-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.auto-seguros-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-sm, 8px);
+  margin-bottom: var(--spacing-md, 16px);
+  font-size: 14px;
+  color: #333333;
+  line-height: 1.5;
+}
+
+.auto-seguros-feature:last-child {
+  margin-bottom: 0;
+}
+
+.feature-check {
+  color: #3073C0;
+  font-weight: 700;
+  flex-shrink: 0;
+  width: 20px;
+}
+
+.feature-check.disabled {
+  color: #E0E0E0;
+}
+
+.feature-disabled {
+  color: #999999;
+}
+
+.auto-seguros-card-footer {
+  padding: var(--spacing-lg, 24px);
+  border-top: 1px solid #E0E0E0;
+}
+
+/* Botones */
+.auto-seguros-btn {
+  width: 100%;
+  padding: var(--spacing-md, 16px) var(--spacing-lg, 24px);
+  font-family: 'Montserrat', 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.auto-seguros-btn-primary {
+  background: #3073C0;
+  color: #FFFFFF;
+  border-color: #3073C0;
+}
+
+.auto-seguros-btn-primary:hover {
+  background: #153A5A;
+  border-color: #153A5A;
+}
+
+.auto-seguros-btn-outline {
+  background: transparent;
+  color: #3073C0;
+  border-color: #3073C0;
+}
+
+.auto-seguros-btn-outline:hover {
+  background: #3073C0;
+  color: #FFFFFF;
+}
+
+.auto-seguros-btn-large {
+  padding: var(--spacing-lg, 24px) var(--spacing-2xl, 48px);
+  font-size: 16px;
+}
+
+/* Beneficios */
+.auto-seguros-benefits {
+  background: #FFFFFF;
+  padding: var(--spacing-3xl, 64px) var(--spacing-2xl, 48px);
+  border-radius: 8px;
+  margin-bottom: var(--spacing-3xl, 64px);
+  border: 1px solid #E0E0E0;
+}
+
+.auto-seguros-benefits-title {
+  font-family: 'Playfair Display', 'Merriweather', Georgia, serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: #153A5A;
+  text-align: center;
+  margin: 0 0 var(--spacing-2xl, 48px) 0;
+}
+
+.auto-seguros-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-xl, 32px);
+}
+
+.auto-seguros-benefit-item {
+  text-align: center;
+}
+
+.auto-seguros-benefit-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto var(--spacing-md, 16px);
+}
+
+.auto-seguros-benefit-heading {
+  font-size: 16px;
+  font-weight: 600;
+  color: #153A5A;
+  margin: 0 0 var(--spacing-sm, 8px) 0;
+}
+
+.auto-seguros-benefit-text {
+  font-size: 14px;
+  color: #666666;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* CTA Final */
+.auto-seguros-cta {
+  text-align: center;
+  background: linear-gradient(135deg, #153A5A 0%, #00335B 100%);
+  padding: var(--spacing-3xl, 64px) var(--spacing-2xl, 48px);
+  border-radius: 8px;
+}
+
+.auto-seguros-cta-title {
+  font-family: 'Playfair Display', 'Merriweather', Georgia, serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin: 0 0 var(--spacing-md, 16px) 0;
+}
+
+.auto-seguros-cta-text {
+  font-size: 18px;
+  color: #F5F5F5;
+  margin: 0 0 var(--spacing-xl, 32px) 0;
+  line-height: 1.6;
+}
+
+.auto-seguros-cta .auto-seguros-btn {
+  background: #FFFFFF;
+  color: #153A5A;
+  border-color: #FFFFFF;
+  min-width: 320px;
+}
+
+.auto-seguros-cta .auto-seguros-btn:hover {
+  background: #F9F8F4;
+  border-color: #F9F8F4;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .auto-seguros-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .auto-seguros-benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .auto-seguros-section {
+    padding: var(--spacing-2xl, 48px) 0;
+  }
+  
+  .auto-seguros-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .auto-seguros-benefits-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .auto-seguros-title {
+    font-size: 28px;
+  }
+  
+  .auto-seguros-subtitle {
+    font-size: 16px;
+  }
+  
+  .auto-seguros-cta-title {
+    font-size: 24px;
+  }
+  
+  .auto-seguros-cta .auto-seguros-btn {
+    min-width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .auto-seguros-container {
+    padding: 0 var(--spacing-md, 16px);
+  }
+  
+  .auto-seguros-benefits {
+    padding: var(--spacing-xl, 32px) var(--spacing-lg, 24px);
+  }
+  
+  .auto-seguros-cta {
+    padding: var(--spacing-2xl, 48px) var(--spacing-lg, 24px);
+  }
+}
+</style>
+
+<script>
+/**
+ * Funcionalidad JavaScript para el módulo de Seguros de Auto
+ * Maneja interacciones de botones de cotización
+ */
+(function() {
+  'use strict';
+  
+  // Seleccionar todos los botones de cotización
+  const cotizarButtons = document.querySelectorAll('.auto-seguros-btn');
+  
+  // Agregar event listeners
+  cotizarButtons.forEach(button => {
+    button.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      // Obtener información del plan si está dentro de una card
+      const card = this.closest('.auto-seguros-card');
+      const planType = card ? card.getAttribute('data-plan') : 'general';
+      
+      // Aquí puedes integrar con tu sistema de cotización
+      // Ejemplo: abrir modal, redirigir a formulario, o llamar API
+      console.log('Solicitud de cotización iniciada para:', planType || 'seguro de auto');
+      
+      // Ejemplo de acción: mostrar mensaje o redirigir
+      alert('¡Gracias por tu interés! Un asesor se pondrá en contacto contigo para brindarte una cotización personalizada.');
+      
+      // Opcional: Redirigir a página de cotización
+      // window.location.href = '/cotizador-seguro-auto?plan=' + planType;
+    });
+  });
+  
+  // Agregar efecto de hover en cards para mejor UX
+  const cards = document.querySelectorAll('.auto-seguros-card');
+  cards.forEach(card => {
+    card.addEventListener('mouseenter', function() {
+      cards.forEach(c => {
+        if (c !== card) {
+          c.style.opacity = '0.7';
+        }
+      });
+    });
+    
+    card.addEventListener('mouseleave', function() {
+      cards.forEach(c => {
+        c.style.opacity = '1';
+      });
+    });
+  });
+})();
+</script>
