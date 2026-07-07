@@ -1,0 +1,2344 @@
+<!-- 
+  ================================================================================
+  MÓDULO DE SEGUROS DE AUTO - MONTERREY NEW YORK LIFE
+  Versión Mejorada con Estrategias de Conversión Globales 2025
+  ================================================================================
+  Basado en investigación de las mejores prácticas de:
+  - Geico, Progressive, State Farm (USA)
+  - AXA, Allianz (Europa)
+  - Lemonade, Root (Insurtech)
+  - Quálitas, ANA Seguros (México)
+  
+  Elementos de alta conversión incluidos:
+  ✓ Calculadora interactiva de primas
+  ✓ Comparador visual de planes
+  ✓ Prueba social (testimonios + ratings)
+  ✓ Urgencia/escasez (oferta limitada)
+  ✓ Reducción de fricción (formulario simple)
+  ✓ Garantía de satisfacción
+  ✓ Chat de soporte
+  ✓ FAQ que maneja objeciones
+  ✓ Múltiples CTAs estratégicos
+  ✓ Badges de confianza y seguridad
+  ================================================================================
+-->
+
+<section id="auto-seguros-premium" class="auto-seguros-premium-section">
+  
+  <!-- BARRA DE URGENCIA -->
+  <div class="urgency-banner">
+    <div class="urgency-content">
+      <span class="urgency-icon">⏰</span>
+      <span class="urgency-text">¡Oferta Especial! <strong>20% de descuento</strong> en tu primera póliza - Termina en:</span>
+      <span class="urgency-timer" id="countdown-timer">04:59:59</span>
+    </div>
+  </div>
+
+  <div class="auto-seguros-container">
+    
+    <!-- Encabezado con Propuesta de Valor Única -->
+    <div class="auto-seguros-header">
+      <div class="trust-badges">
+        <span class="badge"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z" fill="#3073C0"/></svg> AM Best A+</span>
+        <span class="badge"><svg viewBox="0 0 24 24" fill="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="#3073C0"/></svg> +500K Clientes Satisfechos</span>
+        <span class="badge"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#3073C0" stroke-width="2"/><path d="M12 6v6l4 2" stroke="#3073C0" stroke-width="2"/></svg> Atención 24/7</span>
+      </div>
+      
+      <h2 class="auto-seguros-title">El Seguro de Auto Más Inteligente de México</h2>
+      <p class="auto-seguros-subtitle">Protege tu patrimonio con coberturas premium desde <strong>$299/mes</strong>. Cotización en 90 segundos.</p>
+      
+      <!-- Score de satisfacción -->
+      <div class="satisfaction-score">
+        <div class="stars">★★★★★</div>
+        <span class="score-text"><strong>4.9/5</strong> basado en 12,847 opiniones verificadas</span>
+        <span class="score-source">- Google Reviews & Trustpilot</span>
+      </div>
+    </div>
+
+    <!-- CALCULADORA INTERACTIVA DE PRIMAS -->
+    <div class="premium-calculator" id="calculadora">
+      <div class="calculator-header">
+        <h3 class="calculator-title">Calcula tu Prima en Segundos</h3>
+        <p class="calculator-subtitle">Sin compromiso. Sin datos personales requeridos.</p>
+      </div>
+      
+      <div class="calculator-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="vehicle-type">Tipo de Vehículo</label>
+            <select id="vehicle-type" class="form-select">
+              <option value="sedan">Sedán / Compacto</option>
+              <option value="suv">SUV / Crossover</option>
+              <option value="truck">Pickup / Camioneta</option>
+              <option value="luxury">Lujo / Deportivo</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="vehicle-year">Año del Vehículo</label>
+            <select id="vehicle-year" class="form-select">
+              <option value="2025">2025</option>
+              <option value="2024">2024</option>
+              <option value="2023">2023</option>
+              <option value="2022">2022</option>
+              <option value="2021">2021</option>
+              <option value="older">2020 o anterior</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="driver-age">Edad del Conductor Principal</label>
+            <select id="driver-age" class="form-select">
+              <option value="18-24">18-24 años</option>
+              <option value="25-34">25-34 años</option>
+              <option value="35-44">35-44 años</option>
+              <option value="45-54">45-54 años</option>
+              <option value="55+">55+ años</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="usage">Uso Principal</label>
+            <select id="usage" class="form-select">
+              <option value="personal">Personal / Familiar</option>
+              <option value="work">Trabajo / Negocios</option>
+              <option value="rideshare">Apps de Transporte</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="calculator-actions">
+          <button type="button" class="calc-btn-primary" id="calculate-btn">
+            <svg viewBox="0 0 24 24" fill="none" width="20" height="20"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>
+            CALCULAR MI PRIMA
+          </button>
+          <span class="disclaimer-text">🔒 Tus datos están 100% seguros. No compartimos información.</span>
+        </div>
+      </div>
+      
+      <!-- Resultados de la calculadora (ocultos inicialmente) -->
+      <div class="calculator-results" id="calculator-results" style="display: none;">
+        <div class="results-header">
+          <h4>Tu Estimación Personalizada</h4>
+          <span class="results-badge">Basado en tu perfil</span>
+        </div>
+        
+        <div class="price-range-display">
+          <div class="price-item">
+            <span class="price-label">Cobertura Básica</span>
+            <span class="price-value" id="price-basic">$299</span>
+            <span class="price-period">/mes</span>
+          </div>
+          <div class="price-item featured">
+            <span class="price-label">Cobertura Recomendada ⭐</span>
+            <span class="price-value" id="price-recommended">$549</span>
+            <span class="price-period">/mes</span>
+            <span class="savings-tag">Ahorra 15%</span>
+          </div>
+          <div class="price-item">
+            <span class="price-label">Cobertura Premium</span>
+            <span class="price-value" id="price-premium">$899</span>
+            <span class="price-period">/mes</span>
+          </div>
+        </div>
+        
+        <div class="results-cta">
+          <button type="button" class="cta-btn-large" onclick="scrollToPlans()">
+            VER PLANES DETALLADOS →
+          </button>
+          <p class="micro-copy">✓ Sin compromiso de compra &nbsp;|&nbsp; ✓ Cancelación gratuita por 30 días</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- COMPARADOR DE PLANES -->
+    <div class="plans-comparison" id="planes">
+      <div class="comparison-header">
+        <h3 class="comparison-title">Elige la Protección Perfecta para Ti</h3>
+        <p class="comparison-subtitle">Todos nuestros planes incluyen asistencia vial 24/7 y atención de siniestros en español</p>
+        
+        <!-- Toggle mensual/anual -->
+        <div class="billing-toggle">
+          <span class="toggle-label active" data-billing="monthly">Mensual</span>
+          <label class="toggle-switch">
+            <input type="checkbox" id="billing-switch">
+            <span class="toggle-slider"></span>
+          </label>
+          <span class="toggle-label" data-billing="annual">Anual <span class="save-badge">Ahorra 2 meses</span></span>
+        </div>
+      </div>
+
+      <div class="plans-grid">
+        
+        <!-- Plan Básico -->
+        <article class="plan-card" data-plan="basico">
+          <div class="plan-header">
+            <h4 class="plan-name">Responsabilidad Civil</h4>
+            <div class="plan-price">
+              <span class="price-currency">$</span>
+              <span class="price-amount" data-monthly="299" data-annual="2990">299</span>
+              <span class="price-period">/mes</span>
+            </div>
+            <p class="plan-tagline">Lo mínimo legal requerido</p>
+          </div>
+          
+          <div class="plan-features">
+            <ul>
+              <li class="feature-included">
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" stroke="currentColor" stroke-width="2"/></svg>
+                <span>Daños a terceros hasta $500,000</span>
+              </li>
+              <li class="feature-included">
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" stroke="currentColor" stroke-width="2"/></svg>
+                <span>Lesiones corporales hasta $250,000</span>
+              </li>
+              <li class="feature-included">
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" stroke="currentColor" stroke-width="2"/></svg>
+                <span>Gastos médicos ocupantes $50,000</span>
+              </li>
+              <li class="feature-included">
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" stroke="currentColor" stroke-width="2"/></svg>
+                <span>Asistencia vial básica</span>
+              </li>
+              <li class="feature-excluded">
+                <svg class="x-icon" viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2"/></svg>
+                <span>Auto sustituto</span>
+              </li>
+              <li class="feature-excluded">
+                <svg class="x-icon" viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2"/></svg>
+                <span>Daños a tu vehículo</span>
+              </li>
+              <li class="feature-excluded">
+                <svg class="x-icon" viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2"/></svg>
+                <span>Robo total</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="plan-footer">
+            <button class="plan-btn btn-outline" data-plan="basico">SELECCIONAR PLAN</button>
+            <p class="plan-disclaimer">Deducible: $2,500 MXN</p>
+          </div>
+        </article>
+
+        <!-- Plan Recomendado (DESTACADO) -->
+        <article class="plan-card plan-featured" data-plan="ampliado">
+          <div class="featured-ribbon">
+            <span>MÁS POPULAR</span>
+            <svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="currentColor"/></svg>
+          </div>
+          
+          <div class="plan-header">
+            <h4 class="plan-name">Cobertura Ampliada</h4>
+            <div class="plan-price">
+              <span class="price-currency">$</span>
+              <span class="price-amount" data-monthly="549" data-annual="5490">549</span>
+              <span class="price-period">/mes</span>
+            </div>
+            <p class="plan-tagline">La mejor relación costo-beneficio</p>
+          </div>
+          
+          <div class="plan-features">
+            <ul>
+              <li class="feature-included">
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" stroke="currentColor" stroke-width="2"/></svg>
+                <span><strong>Todo lo del plan básico, más:</strong></span>
+              </li>
+              <li class="feature-included">
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" stroke="currentColor" stroke-width="2"/></svg>
+                <span>Auto sustituto hasta 5 días</span>
+              </li>
+              <li class="feature-included">
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" stroke="currentColor" stroke-width="2"/></svg>
+                <span>Protección de deducible (1 uso/año)</span>
+              </li>
+              <li class="feature-included">
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" stroke="currentColor" stroke-width="2"/></svg>
+                <span>Asistencia vial premium 24/7</span>
+              </li>
+              <li class="feature-included">
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" stroke="currentColor" stroke-width="2"/></svg>
+                <span>Gastos médicos $150,000</span>
+              </li>
+              <li class="feature-included">
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" stroke="currentColor" stroke-width="2"/></svg>
+                <span>Responsabilidad civil hasta $2M</span>
+              </li>
+              <li class="feature-excluded">
+                <svg class="x-icon" viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2"/></svg>
+                <span>Daños materiales a tu vehículo</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="plan-footer">
+            <button class="plan-btn btn-primary" data-plan="ampliado">SELECCIONAR PLAN</button>
+            <p class="plan-disclaimer">Deducible: $1,500 MXN</p>
+            <p class="savings-message">💰 <strong>Ahorra $1,200/año</strong> vs pagar siniestros de bolsillo</p>
+          </div>
+        </article>
+
+        <!-- Plan Premium -->
+        <article class="plan-card" data-plan="premium">
+          <div class="plan-header">
+            <h4 class="plan-name">Cobertura Amplia Premium</h4>
+            <div class="plan-price">
+              <span class="price-currency">$</span>
+              <span class="price-amount" data-monthly="899" data-annual="8990">899</span>
+              <span class="price-period">/mes</span>
+            </div>
+            <p class="plan-tagline">Protección total sin preocupaciones</p>
+          </div>
+          
+          <div class="plan-features">
+            <ul>
+              <li class="feature-included">
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" stroke="currentColor" stroke-width="2"/></svg>
+                <span><strong>Todo lo del plan ampliado, más:</strong></span>
+              </li>
+              <li class="feature-included">
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" stroke="currentColor" stroke-width="2"/></svg>
+                <span>Daños materiales a tu vehículo</span>
+              </li>
+              <li class="feature-included">
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" stroke="currentColor" stroke-width="2"/></svg>
+                <span>Robo total (valor comercial)</span>
+              </li>
+              <li class="feature-included">
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" stroke="currentColor" stroke-width="2"/></svg>
+                <span>Auto sustituto hasta 10 días</span>
+              </li>
+              <li class="feature-included">
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" stroke="currentColor" stroke-width="2"/></svg>
+                <span>Gastos médicos $500,000</span>
+              </li>
+              <li class="feature-included">
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" stroke="currentColor" stroke-width="2"/></svg>
+                <span>Asistencia legal especializada</span>
+              </li>
+              <li class="feature-included">
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" stroke="currentColor" stroke-width="2"/></svg>
+                <span>Vehículo de cortesía extendido</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="plan-footer">
+            <button class="plan-btn btn-outline" data-plan="premium">SELECCIONAR PLAN</button>
+            <p class="plan-disclaimer">Deducible: $1,000 MXN</p>
+          </div>
+        </article>
+      </div>
+      
+      <!-- Garantía de satisfacción -->
+      <div class="satisfaction-guarantee">
+        <div class="guarantee-icon">
+          <svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="28" stroke="#3073C0" stroke-width="2"/><path d="M20 32l8 8 16-16" stroke="#3073C0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="guarantee-content">
+          <h4>Garantía de Satisfacción de 30 Días</h4>
+          <p>Si no estás 100% satisfecho con tu póliza, te devolvemos tu dinero sin preguntas. Sin letras chiquitas.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- TESTIMONIOS DE CLIENTES -->
+    <div class="testimonials-section">
+      <h3 class="section-title">Lo Que Dicen Nuestros Clientes</h3>
+      <p class="section-subtitle">Más de 500,000 conductores protegidos en todo México</p>
+      
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-rating">★★★★★</div>
+          <p class="testimonial-text">"Tuve un accidente hace 3 meses y el proceso fue increíblemente rápido. En 48 horas tenía mi auto reparado. El mejor seguro que he tenido."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">CR</div>
+            <div class="author-info">
+              <strong>Carlos R.</strong>
+              <span>CDMX • Cliente desde 2022</span>
+            </div>
+          </div>
+          <div class="verified-badge">✓ Compra verificada</div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-rating">★★★★★</div>
+          <p class="testimonial-text">"La cotización en línea fue súper fácil y el precio muy competitivo. Llevo 2 años con ellos y nunca he tenido problemas. Totalmente recomendados."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">MG</div>
+            <div class="author-info">
+              <strong>María G.</strong>
+              <span>Monterrey • Cliente desde 2021</span>
+            </div>
+          </div>
+          <div class="verified-badge">✓ Compra verificada</div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-rating">★★★★★</div>
+          <p class="testimonial-text">"Me robaron el auto y la atención fue excepcional. Me ayudaron con todos los trámites legales y recibí mi indemnización en tiempo récord."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">JL</div>
+            <div class="author-info">
+              <strong>Jorge L.</strong>
+              <span>Guadalajara • Cliente desde 2023</span>
+            </div>
+          </div>
+          <div class="verified-badge">✓ Compra verificada</div>
+        </div>
+      </div>
+      
+      <!-- Logos de medios/partners -->
+      <div class="media-logos">
+        <p class="logos-title">Reconocidos por:</p>
+        <div class="logo-grid">
+          <span class="media-logo">Forbes México</span>
+          <span class="media-logo">Expansión</span>
+          <span class="media-logo">El Financiero</span>
+          <span class="media-logo">AMIS</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PREGUNTAS FRECUENTES (FAQ) -->
+    <div class="faq-section">
+      <h3 class="section-title">Preguntas Frecuentes</h3>
+      <p class="section-subtitle">Resolvemos tus dudas antes de que las tengas</p>
+      
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>¿Cuánto tiempo tarda en activarse mi póliza?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M19 9l-7 7-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Tu póliza se activa inmediatamente después de completar el pago. Recibirás tu tarjeta de circulación digital y documentos en tu correo electrónico en menos de 5 minutos. Tu placa engomada física llegará a tu domicilio en 3-5 días hábiles.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>¿Qué debo hacer en caso de siniestro?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M19 9l-7 7-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Llama inmediatamente a nuestra línea de atención 24/7 al 55-1234-5678 o usa nuestra app móvil para reportar el siniestro. Un adjustador se pondrá en contacto contigo en menos de 30 minutos. Si es necesario, enviaremos una grúa y auto sustituto a tu ubicación.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>¿Puedo cancelar mi póliza si no estoy satisfecho?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M19 9l-7 7-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>¡Sí! Ofrecemos una garantía de satisfacción de 30 días. Si cancelas dentro de los primeros 30 días, te devolvemos el 100% de tu prima sin preguntas. Después de ese período, puedes cancelar en cualquier momento con un reembolso proporcional al tiempo no utilizado.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>¿El seguro cubre a otros conductores además de mí?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M19 9l-7 7-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Sí, todos nuestros planes cubren a cualquier persona que conduzca tu vehículo con tu permiso, siempre que tenga licencia de conducir válida. Para el plan Premium, puedes agregar hasta 3 conductores adicionales sin costo extra.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>¿Hay descuentos disponibles?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M19 9l-7 7-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>¡Sí! Ofrecemos múltiples descuentos: hasta 15% por historial de manejo limpio, 10% por pago anual anticipado, 8% por instalar dispositivo telemático, 5% por ser menor de 25 años con buenas calificaciones, y descuentos adicionales por bundling con otros seguros.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA FINAL CON FORMULARIO SIMPLIFICADO -->
+    <div class="final-cta-section">
+      <div class="cta-content">
+        <h3>¿Listo para Proteger Tu Vehículo?</h3>
+        <p>Únete a más de 500,000 conductores que ya disfrutan de tranquilidad al volante</p>
+        
+        <!-- Formulario ultra-simplificado (menos fricción) -->
+        <form class="quick-quote-form" id="quick-quote">
+          <div class="form-step step-1 active">
+            <div class="input-group">
+              <input type="email" id="email" placeholder="tu@email.com" required>
+              <label for="email">Ingresa tu email para comenzar</label>
+            </div>
+            <button type="submit" class="cta-submit-btn">CONTINUAR →</button>
+            <p class="form-microcopy">🔒 Sin spam. Puedes darte de baja cuando quieras.</p>
+          </div>
+          
+          <div class="form-step step-2" style="display: none;">
+            <div class="step-progress">
+              <div class="progress-bar"><div class="progress-fill" style="width: 50%"></div></div>
+              <span>Paso 2 de 3</span>
+            </div>
+            <div class="input-group">
+              <input type="tel" id="phone" placeholder="(55) 1234-5678" required>
+              <label for="phone">Número de celular</label>
+            </div>
+            <button type="submit" class="cta-submit-btn">SIGUIENTE →</button>
+          </div>
+          
+          <div class="form-step step-3" style="display: none;">
+            <div class="step-progress">
+              <div class="progress-bar"><div class="progress-fill" style="width: 100%"></div></div>
+              <span>¡Casi listo!</span>
+            </div>
+            <p class="confirmation-message">✅ ¡Gracias! Un asesor especializado te contactará en menos de 10 minutos con tu cotización personalizada.</p>
+            <button type="button" class="cta-submit-btn secondary" onclick="closeForm()">ENTENDIDO</button>
+          </div>
+        </form>
+        
+        <!-- Alternativas de contacto -->
+        <div class="contact-alternatives">
+          <p>¿Prefieres hablar ahora?</p>
+          <div class="contact-options">
+            <a href="tel:5512345678" class="contact-option">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2"/></svg>
+              <span>55-1234-5678</span>
+            </a>
+            <a href="#" class="contact-option chat-option">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="currentColor" stroke-width="2"/></svg>
+              <span>Chat en vivo</span>
+              <span class="chat-status">● En línea</span>
+            </a>
+            <a href="https://wa.me/525512345678" class="contact-option whatsapp-option">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+              <span>WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Imagen/Ilustración -->
+      <div class="cta-image">
+        <div class="image-placeholder">
+          <svg viewBox="0 0 200 200" fill="none">
+            <circle cx="100" cy="100" r="80" fill="#F5F5F5"/>
+            <rect x="50" y="80" width="100" height="40" rx="8" fill="#3073C0"/>
+            <circle cx="65" cy="125" r="12" fill="#153A5A"/>
+            <circle cx="135" cy="125" r="12" fill="#153A5A"/>
+            <path d="M55 95h90" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  
+  <!-- CHAT FLOTANTE -->
+  <div class="floating-chat" id="chat-widget">
+    <button class="chat-toggle" aria-label="Abrir chat">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="currentColor" stroke-width="2"/></svg>
+      <span class="chat-badge">1</span>
+    </button>
+    <div class="chat-window" style="display: none;">
+      <div class="chat-header">
+        <div class="chat-agent">
+          <div class="agent-avatar">MA</div>
+          <div class="agent-info">
+            <strong>María A.</strong>
+            <span class="agent-status">● En línea</span>
+          </div>
+        </div>
+        <button class="chat-close" aria-label="Cerrar chat">×</button>
+      </div>
+      <div class="chat-body">
+        <div class="chat-message bot">
+          <p>¡Hola! 👋 Soy María, especialista en seguros de auto. ¿En qué puedo ayudarte hoy?</p>
+        </div>
+        <div class="chat-message bot">
+          <p>¿Te gustaría:</p>
+          <ul>
+            <li><button class="chat-option">Cotizar un seguro</button></li>
+            <li><button class="chat-option">Reportar un siniestro</button></li>
+            <li><button class="chat-option">Hablar con un humano</button></li>
+          </ul>
+        </div>
+      </div>
+      <div class="chat-input">
+        <input type="text" placeholder="Escribe tu mensaje...">
+        <button type="submit">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+<style>
+/* ============================================================================
+   ESTILOS - MÓDULO SEGUROS DE AUTO PREMIUM
+   Design Tokens: Monterrey New York Life
+   ============================================================================ */
+
+:root {
+  --color-primary-dark: #153A5A;
+  --color-primary: #00335B;
+  --color-accent: #3073C0;
+  --color-bg-light: #F9F8F4;
+  --color-bg-white: #FFFFFF;
+  --color-bg-gray: #F5F5F5;
+  --color-border: #E0E0E0;
+  --color-text-dark: #333333;
+  --color-text-medium: #666666;
+  --color-text-light: #999999;
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 32px;
+  --spacing-xl: 48px;
+  --spacing-2xl: 64px;
+  --spacing-3xl: 96px;
+  --font-heading: 'Playfair Display', 'Merriweather', Georgia, serif;
+  --font-body: 'Montserrat', 'Open Sans', sans-serif;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.12);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.16);
+  --shadow-xl: 0 12px 48px rgba(0,0,0,0.2);
+}
+
+.auto-seguros-premium-section {
+  background-color: var(--color-bg-light);
+  padding: var(--spacing-3xl) 0;
+  font-family: var(--font-body);
+  position: relative;
+  overflow: hidden;
+}
+
+.auto-seguros-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+}
+
+/* BARRA DE URGENCIA */
+.urgency-banner {
+  background: linear-gradient(90deg, #153A5A 0%, #3073C0 100%);
+  color: white;
+  padding: var(--spacing-sm) var(--spacing-md);
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--shadow-md);
+}
+
+.urgency-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.urgency-icon {
+  font-size: 20px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.1); }
+}
+
+.urgency-text {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.urgency-timer {
+  background: rgba(255,255,255,0.2);
+  padding: 4px 12px;
+  border-radius: var(--radius-sm);
+  font-family: monospace;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* TRUST BADGES */
+.trust-badges {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+  flex-wrap: wrap;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--color-text-medium);
+  background: var(--color-bg-white);
+  padding: 6px 12px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+}
+
+.badge svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* HEADER */
+.auto-seguros-header {
+  text-align: center;
+  margin-bottom: var(--spacing-3xl);
+}
+
+.auto-seguros-title {
+  font-family: var(--font-heading);
+  font-size: clamp(28px, 5vw, 42px);
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin: 0 0 var(--spacing-md) 0;
+  line-height: 1.2;
+}
+
+.auto-seguros-subtitle {
+  font-size: clamp(16px, 2vw, 18px);
+  color: var(--color-text-medium);
+  margin: 0 0 var(--spacing-lg) 0;
+  line-height: 1.6;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.satisfaction-score {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.stars {
+  color: #FFB800;
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+
+.score-text {
+  color: var(--color-text-dark);
+  font-size: 16px;
+}
+
+.score-source {
+  color: var(--color-text-light);
+  font-size: 14px;
+}
+
+/* CALCULADORA */
+.premium-calculator {
+  background: var(--color-bg-white);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-2xl);
+  margin-bottom: var(--spacing-3xl);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border);
+}
+
+.calculator-header {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.calculator-title {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--color-primary-dark);
+  margin: 0 0 var(--spacing-sm) 0;
+}
+
+.calculator-subtitle {
+  font-size: 16px;
+  color: var(--color-text-medium);
+  margin: 0;
+}
+
+.calculator-form {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-dark);
+  margin-bottom: var(--spacing-xs);
+}
+
+.form-select {
+  padding: var(--spacing-sm);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: 15px;
+  font-family: var(--font-body);
+  background: var(--color-bg-white);
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.form-select:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+.calculator-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.calc-btn-primary {
+  background: var(--color-accent);
+  color: white;
+  border: none;
+  padding: var(--spacing-md) var(--spacing-2xl);
+  font-size: 16px;
+  font-weight: 600;
+  font-family: var(--font-body);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.calc-btn-primary:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.disclaimer-text {
+  font-size: 13px;
+  color: var(--color-text-light);
+}
+
+/* RESULTADOS CALCULADORA */
+.calculator-results {
+  margin-top: var(--spacing-2xl);
+  padding-top: var(--spacing-2xl);
+  border-top: 2px solid var(--color-border);
+  animation: slideDown 0.4s ease;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.results-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-lg);
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.results-header h4 {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  color: var(--color-primary-dark);
+  margin: 0;
+}
+
+.results-badge {
+  background: var(--color-bg-gray);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  color: var(--color-text-medium);
+}
+
+.price-range-display {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+}
+
+.price-item {
+  background: var(--color-bg-gray);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-md);
+  text-align: center;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.price-item.featured {
+  background: linear-gradient(135deg, #153A5A 0%, #3073C0 100%);
+  color: white;
+  transform: scale(1.05);
+  border-color: var(--color-accent);
+}
+
+.price-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: var(--spacing-sm);
+}
+
+.price-value {
+  display: block;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.price-currency {
+  font-size: 20px;
+  vertical-align: super;
+}
+
+.price-period {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.savings-tag {
+  display: inline-block;
+  background: #22C55E;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  margin-top: var(--spacing-xs);
+}
+
+.results-cta {
+  text-align: center;
+}
+
+.cta-btn-large {
+  background: var(--color-accent);
+  color: white;
+  border: none;
+  padding: var(--spacing-md) var(--spacing-2xl);
+  font-size: 16px;
+  font-weight: 600;
+  font-family: var(--font-body);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cta-btn-large:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.micro-copy {
+  font-size: 13px;
+  color: var(--color-text-light);
+  margin-top: var(--spacing-sm);
+}
+
+/* COMPARADOR DE PLANES */
+.plans-comparison {
+  margin-bottom: var(--spacing-3xl);
+}
+
+.comparison-header {
+  text-align: center;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.comparison-title {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--color-primary-dark);
+  margin: 0 0 var(--spacing-sm) 0;
+}
+
+.comparison-subtitle {
+  font-size: 16px;
+  color: var(--color-text-medium);
+  margin: 0 0 var(--spacing-lg) 0;
+}
+
+.billing-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+}
+
+.toggle-label {
+  font-size: 15px;
+  color: var(--color-text-medium);
+  cursor: pointer;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  transition: all 0.3s ease;
+}
+
+.toggle-label.active {
+  color: var(--color-primary-dark);
+  font-weight: 600;
+  background: var(--color-bg-gray);
+}
+
+.save-badge {
+  background: #22C55E;
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  margin-left: 4px;
+}
+
+.toggle-switch {
+  position: relative;
+  width: 52px;
+  height: 28px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-border);
+  transition: 0.3s;
+  border-radius: 28px;
+}
+
+.toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.3s;
+  border-radius: 50%;
+}
+
+.toggle-switch input:checked + .toggle-slider {
+  background-color: var(--color-accent);
+}
+
+.toggle-switch input:checked + .toggle-slider:before {
+  transform: translateX(24px);
+}
+
+/* GRID DE PLANES */
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.plan-card {
+  background: var(--color-bg-white);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.plan-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.plan-featured {
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-md);
+}
+
+.plan-featured:hover {
+  box-shadow: var(--shadow-xl);
+}
+
+.featured-ribbon {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, var(--color-accent), var(--color-primary));
+  color: white;
+  padding: 6px 20px;
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+  z-index: 1;
+}
+
+.plan-header {
+  padding: var(--spacing-xl) var(--spacing-lg);
+  text-align: center;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.plan-name {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-primary-dark);
+  margin: 0 0 var(--spacing-md) 0;
+}
+
+.plan-price {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 2px;
+  margin-bottom: var(--spacing-sm);
+}
+
+.price-currency {
+  font-size: 20px;
+  color: var(--color-text-medium);
+}
+
+.price-amount {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  line-height: 1;
+}
+
+.plan-featured .price-amount {
+  color: var(--color-accent);
+}
+
+.price-period {
+  font-size: 16px;
+  color: var(--color-text-medium);
+}
+
+.plan-tagline {
+  font-size: 14px;
+  color: var(--color-text-light);
+  margin: 0;
+}
+
+.plan-features {
+  padding: var(--spacing-xl) var(--spacing-lg);
+}
+
+.plan-features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.plan-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.plan-features li:last-child {
+  margin-bottom: 0;
+}
+
+.feature-included {
+  color: var(--color-text-dark);
+}
+
+.feature-excluded {
+  color: var(--color-text-light);
+}
+
+.check-icon,
+.x-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.check-icon {
+  color: #22C55E;
+}
+
+.x-icon {
+  color: var(--color-border);
+}
+
+.plan-footer {
+  padding: var(--spacing-lg);
+  border-top: 1px solid var(--color-border);
+  text-align: center;
+}
+
+.plan-btn {
+  width: 100%;
+  padding: var(--spacing-md);
+  font-size: 15px;
+  font-weight: 600;
+  font-family: var(--font-body);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-primary {
+  background: var(--color-accent);
+  color: white;
+  border: 2px solid var(--color-accent);
+}
+
+.btn-primary:hover {
+  background: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--color-accent);
+  border: 2px solid var(--color-accent);
+}
+
+.btn-outline:hover {
+  background: var(--color-accent);
+  color: white;
+}
+
+.plan-disclaimer {
+  font-size: 13px;
+  color: var(--color-text-light);
+  margin: var(--spacing-sm) 0 0 0;
+}
+
+.savings-message {
+  font-size: 13px;
+  color: #22C55E;
+  margin: var(--spacing-xs) 0 0 0;
+}
+
+/* GARANTÍA */
+.satisfaction-guarantee {
+  background: var(--color-bg-white);
+  border: 2px dashed var(--color-accent);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.guarantee-icon {
+  flex-shrink: 0;
+}
+
+.guarantee-icon svg {
+  width: 64px;
+  height: 64px;
+}
+
+.guarantee-content h4 {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  color: var(--color-primary-dark);
+  margin: 0 0 var(--spacing-xs) 0;
+}
+
+.guarantee-content p {
+  font-size: 15px;
+  color: var(--color-text-medium);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* TESTIMONIOS */
+.testimonials-section {
+  margin-bottom: var(--spacing-3xl);
+  text-align: center;
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--color-primary-dark);
+  margin: 0 0 var(--spacing-sm) 0;
+}
+
+.section-subtitle {
+  font-size: 16px;
+  color: var(--color-text-medium);
+  margin: 0 0 var(--spacing-2xl) 0;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.testimonial-card {
+  background: var(--color-bg-white);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  text-align: left;
+  border: 1px solid var(--color-border);
+}
+
+.testimonial-rating {
+  color: #FFB800;
+  font-size: 20px;
+  letter-spacing: 2px;
+  margin-bottom: var(--spacing-md);
+}
+
+.testimonial-text {
+  font-size: 15px;
+  color: var(--color-text-dark);
+  line-height: 1.6;
+  margin: 0 0 var(--spacing-lg) 0;
+  font-style: italic;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+}
+
+.author-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-accent), var(--color-primary));
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.author-info {
+  text-align: left;
+}
+
+.author-info strong {
+  display: block;
+  font-size: 15px;
+  color: var(--color-primary-dark);
+}
+
+.author-info span {
+  font-size: 13px;
+  color: var(--color-text-light);
+}
+
+.verified-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: #22C55E;
+  font-weight: 600;
+}
+
+/* MEDIA LOGOS */
+.media-logos {
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--spacing-xl);
+}
+
+.logos-title {
+  font-size: 14px;
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-md);
+}
+
+.logo-grid {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-2xl);
+  flex-wrap: wrap;
+}
+
+.media-logo {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-text-light);
+  opacity: 0.6;
+}
+
+/* FAQ */
+.faq-section {
+  margin-bottom: var(--spacing-3xl);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.faq-list {
+  background: var(--color-bg-white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-question {
+  width: 100%;
+  padding: var(--spacing-lg);
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-primary-dark);
+  font-family: var(--font-body);
+  transition: background 0.3s ease;
+}
+
+.faq-question:hover {
+  background: var(--color-bg-gray);
+}
+
+.faq-question[aria-expanded="true"] .faq-icon {
+  transform: rotate(180deg);
+}
+
+.faq-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.faq-answer {
+  padding: 0 var(--spacing-lg) var(--spacing-lg);
+  display: none;
+}
+
+.faq-item.active .faq-answer {
+  display: block;
+  animation: slideDown 0.3s ease;
+}
+
+.faq-answer p {
+  font-size: 15px;
+  color: var(--color-text-medium);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* FINAL CTA */
+.final-cta-section {
+  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-3xl);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-2xl);
+  align-items: center;
+  color: white;
+  overflow: hidden;
+  position: relative;
+}
+
+.final-cta-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(48,115,192,0.3) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.cta-content h3 {
+  font-family: var(--font-heading);
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0 0 var(--spacing-md) 0;
+}
+
+.cta-content > p {
+  font-size: 18px;
+  opacity: 0.9;
+  margin: 0 0 var(--spacing-xl) 0;
+  line-height: 1.5;
+}
+
+.quick-quote-form {
+  background: var(--color-bg-white);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  color: var(--color-text-dark);
+}
+
+.form-step {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: var(--spacing-md);
+}
+
+.input-group input {
+  width: 100%;
+  padding: var(--spacing-md);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: 16px;
+  font-family: var(--font-body);
+  transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+.input-group label {
+  position: absolute;
+  left: var(--spacing-md);
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: var(--color-text-light);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+  top: 0;
+  left: var(--spacing-sm);
+  font-size: 12px;
+  background: var(--color-bg-white);
+  padding: 0 4px;
+  color: var(--color-accent);
+}
+
+.cta-submit-btn {
+  width: 100%;
+  padding: var(--spacing-md);
+  background: var(--color-accent);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 16px;
+  font-weight: 600;
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cta-submit-btn:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.cta-submit-btn.secondary {
+  background: var(--color-bg-gray);
+  color: var(--color-text-dark);
+}
+
+.cta-submit-btn.secondary:hover {
+  background: var(--color-border);
+}
+
+.form-microcopy {
+  font-size: 12px;
+  color: var(--color-text-light);
+  text-align: center;
+  margin: var(--spacing-sm) 0 0 0;
+}
+
+.step-progress {
+  margin-bottom: var(--spacing-md);
+}
+
+.progress-bar {
+  height: 4px;
+  background: var(--color-bg-gray);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: var(--spacing-xs);
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--color-accent);
+  transition: width 0.3s ease;
+}
+
+.step-progress span {
+  font-size: 13px;
+  color: var(--color-text-medium);
+}
+
+.confirmation-message {
+  font-size: 15px;
+  color: #22C55E;
+  text-align: center;
+  margin: 0 0 var(--spacing-md) 0;
+  line-height: 1.5;
+}
+
+.contact-alternatives {
+  margin-top: var(--spacing-xl);
+  text-align: center;
+}
+
+.contact-alternatives > p {
+  font-size: 14px;
+  opacity: 0.8;
+  margin: 0 0 var(--spacing-md) 0;
+}
+
+.contact-options {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.contact-option {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: rgba(255,255,255,0.1);
+  border-radius: var(--radius-md);
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.contact-option:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+.contact-option svg {
+  width: 20px;
+  height: 20px;
+}
+
+.chat-status {
+  color: #22C55E;
+  font-size: 12px;
+}
+
+.whatsapp-option {
+  background: #25D366;
+}
+
+.whatsapp-option:hover {
+  background: #1EBE5B;
+}
+
+.cta-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-placeholder {
+  width: 300px;
+  height: 300px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-placeholder svg {
+  width: 200px;
+  height: 200px;
+}
+
+/* CHAT FLOTANTE */
+.floating-chat {
+  position: fixed;
+  bottom: var(--spacing-lg);
+  right: var(--spacing-lg);
+  z-index: 1000;
+}
+
+.chat-toggle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lg);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.chat-toggle:hover {
+  background: var(--color-primary-dark);
+  transform: scale(1.1);
+}
+
+.chat-toggle svg {
+  width: 28px;
+  height: 28px;
+}
+
+.chat-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: #EF4444;
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+}
+
+.chat-window {
+  position: absolute;
+  bottom: 80px;
+  right: 0;
+  width: 350px;
+  height: 500px;
+  background: var(--color-bg-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xl);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.chat-header {
+  background: linear-gradient(135deg, var(--color-primary-dark), var(--color-accent));
+  color: white;
+  padding: var(--spacing-md);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-agent {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.agent-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.agent-info strong {
+  display: block;
+  font-size: 15px;
+}
+
+.agent-status {
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.chat-close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.chat-close:hover {
+  opacity: 1;
+}
+
+.chat-body {
+  flex: 1;
+  padding: var(--spacing-md);
+  overflow-y: auto;
+  background: var(--color-bg-gray);
+}
+
+.chat-message {
+  margin-bottom: var(--spacing-md);
+}
+
+.chat-message.bot {
+  background: var(--color-bg-white);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  border-bottom-left-radius: 0;
+}
+
+.chat-message p {
+  font-size: 14px;
+  color: var(--color-text-dark);
+  line-height: 1.5;
+  margin: 0 0 var(--spacing-sm) 0;
+}
+
+.chat-message ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.chat-option {
+  display: block;
+  width: 100%;
+  padding: var(--spacing-sm);
+  margin-bottom: var(--spacing-xs);
+  background: var(--color-bg-light);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  color: var(--color-accent);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.chat-option:hover {
+  background: var(--color-accent);
+  color: white;
+  border-color: var(--color-accent);
+}
+
+.chat-input {
+  display: flex;
+  padding: var(--spacing-md);
+  background: var(--color-bg-white);
+  border-top: 1px solid var(--color-border);
+  gap: var(--spacing-sm);
+}
+
+.chat-input input {
+  flex: 1;
+  padding: var(--spacing-sm);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  font-family: var(--font-body);
+}
+
+.chat-input input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+.chat-input button {
+  width: 40px;
+  height: 40px;
+  background: var(--color-accent);
+  border: none;
+  border-radius: var(--radius-md);
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.chat-input button:hover {
+  background: var(--color-primary-dark);
+}
+
+.chat-input button svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .final-cta-section {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .cta-image {
+    order: -1;
+  }
+  
+  .image-placeholder {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .image-placeholder svg {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .auto-seguros-premium-section {
+    padding: var(--spacing-2xl) 0;
+  }
+  
+  .urgency-content {
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+  
+  .trust-badges {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .plans-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .plan-featured {
+    transform: scale(1);
+  }
+  
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .final-cta-section {
+    padding: var(--spacing-xl);
+  }
+  
+  .cta-content h3 {
+    font-size: 28px;
+  }
+  
+  .floating-chat {
+    bottom: var(--spacing-md);
+    right: var(--spacing-md);
+  }
+  
+  .chat-window {
+    width: calc(100vw - 32px);
+    right: -10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .auto-seguros-container {
+    padding: 0 var(--spacing-md);
+  }
+  
+  .premium-calculator {
+    padding: var(--spacing-lg);
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .price-item.featured {
+    transform: scale(1);
+  }
+  
+  .satisfaction-guarantee {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .contact-options {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+</style>
+
+<script>
+/**
+ * Funcionalidad JavaScript para el Módulo de Seguros de Auto Premium
+ * Incluye: calculadora, toggle billing, FAQ accordion, chat widget, countdown timer
+ */
+(function() {
+  'use strict';
+  
+  // ==========================================================================
+  // COUNTDOWN TIMER
+  // ==========================================================================
+  const countdownTimer = document.getElementById('countdown-timer');
+  if (countdownTimer) {
+    let totalSeconds = 5 * 60 * 60; // 5 horas
+    
+    function updateTimer() {
+      const hours = Math.floor(totalSeconds / 3600);
+      const minutes = Math.floor((totalSeconds % 3600) / 60);
+      const seconds = totalSeconds % 60;
+      
+      countdownTimer.textContent = 
+        `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+      
+      if (totalSeconds > 0) {
+        totalSeconds--;
+      } else {
+        // Resetear cuando llega a cero
+        totalSeconds = 5 * 60 * 60;
+      }
+    }
+    
+    setInterval(updateTimer, 1000);
+    updateTimer();
+  }
+  
+  // ==========================================================================
+  // CALCULADORA DE PRIMAS
+  // ==========================================================================
+  const calculateBtn = document.getElementById('calculate-btn');
+  const calculatorResults = document.getElementById('calculator-results');
+  
+  if (calculateBtn && calculatorResults) {
+    calculateBtn.addEventListener('click', function() {
+      // Simular cálculo (en producción, esto llamaría a una API)
+      const vehicleType = document.getElementById('vehicle-type').value;
+      const vehicleYear = document.getElementById('vehicle-year').value;
+      const driverAge = document.getElementById('driver-age').value;
+      const usage = document.getElementById('usage').value;
+      
+      // Mostrar resultados con animación
+      calculatorResults.style.display = 'block';
+      calculatorResults.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      
+      // Actualizar precios basados en selección (ejemplo simplificado)
+      let basePrice = 299;
+      
+      if (vehicleType === 'suv') basePrice = 349;
+      if (vehicleType === 'truck') basePrice = 399;
+      if (vehicleType === 'luxury') basePrice = 599;
+      
+      if (driverAge === '18-24') basePrice *= 1.3;
+      if (driverAge === '55+') basePrice *= 0.9;
+      
+      if (usage === 'rideshare') basePrice *= 1.5;
+      
+      basePrice = Math.round(basePrice / 10) * 10; // Redondear
+      
+      document.getElementById('price-basic').textContent = '$' + basePrice;
+      document.getElementById('price-recommended').textContent = '$' + Math.round(basePrice * 1.8);
+      document.getElementById('price-premium').textContent = '$' + Math.round(basePrice * 3);
+      
+      console.log('Cálculo realizado:', { vehicleType, vehicleYear, driverAge, usage });
+    });
+  }
+  
+  // Scroll suave a planes
+  window.scrollToPlans = function() {
+    document.getElementById('planes').scrollIntoView({ behavior: 'smooth' });
+  };
+  
+  // ==========================================================================
+  // TOGGLE BILLING (Mensual/Anual)
+  // ==========================================================================
+  const billingSwitch = document.getElementById('billing-switch');
+  const toggleLabels = document.querySelectorAll('.toggle-label');
+  
+  if (billingSwitch) {
+    billingSwitch.addEventListener('change', function() {
+      const isAnnual = this.checked;
+      
+      // Actualizar labels activos
+      toggleLabels.forEach(label => {
+        if (label.dataset.billing === (isAnnual ? 'annual' : 'monthly')) {
+          label.classList.add('active');
+        } else {
+          label.classList.remove('active');
+        }
+      });
+      
+      // Actualizar precios en todas las cards
+      const priceAmounts = document.querySelectorAll('.price-amount');
+      priceAmounts.forEach(amount => {
+        const monthly = amount.dataset.monthly;
+        const annual = amount.dataset.annual;
+        amount.textContent = isAnnual ? annual : monthly;
+      });
+      
+      // Actualizar períodos
+      const periods = document.querySelectorAll('.price-period');
+      periods.forEach(period => {
+        period.textContent = isAnnual ? '/año' : '/mes';
+      });
+    });
+  }
+  
+  // ==========================================================================
+  // BOTONES DE SELECCIÓN DE PLANES
+  // ==========================================================================
+  const planButtons = document.querySelectorAll('.plan-btn');
+  planButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const plan = this.dataset.plan;
+      console.log('Plan seleccionado:', plan);
+      
+      // Aquí puedes integrar con tu sistema de checkout
+      alert(`¡Excelente elección! Has seleccionado el plan ${plan.toUpperCase()}. Un asesor te contactará para finalizar tu póliza.`);
+      
+      // Opcional: Redirigir a checkout
+      // window.location.href = '/checkout?plan=' + plan;
+    });
+  });
+  
+  // ==========================================================================
+  // FAQ ACCORDION
+  // ==========================================================================
+  const faqQuestions = document.querySelectorAll('.faq-question');
+  faqQuestions.forEach(question => {
+    question.addEventListener('click', function() {
+      const faqItem = this.closest('.faq-item');
+      const isExpanded = this.getAttribute('aria-expanded') === 'true';
+      
+      // Cerrar todos los demás
+      faqQuestions.forEach(q => {
+        q.setAttribute('aria-expanded', 'false');
+        q.closest('.faq-item').classList.remove('active');
+      });
+      
+      // Toggle actual
+      if (!isExpanded) {
+        this.setAttribute('aria-expanded', 'true');
+        faqItem.classList.add('active');
+      }
+    });
+  });
+  
+  // ==========================================================================
+  // CHAT WIDGET
+  // ==========================================================================
+  const chatToggle = document.querySelector('.chat-toggle');
+  const chatWindow = document.querySelector('.chat-window');
+  const chatClose = document.querySelector('.chat-close');
+  
+  if (chatToggle && chatWindow) {
+    chatToggle.addEventListener('click', function() {
+      chatWindow.style.display = chatWindow.style.display === 'none' ? 'flex' : 'none';
+      this.style.display = chatWindow.style.display === 'none' ? 'flex' : 'none';
+    });
+  }
+  
+  if (chatClose && chatWindow) {
+    chatClose.addEventListener('click', function() {
+      chatWindow.style.display = 'none';
+      chatToggle.style.display = 'flex';
+    });
+  }
+  
+  // Opciones del chat
+  const chatOptions = document.querySelectorAll('.chat-option');
+  chatOptions.forEach(option => {
+    option.addEventListener('click', function() {
+      const userChoice = this.textContent;
+      console.log('Usuario seleccionó:', userChoice);
+      
+      // Agregar mensaje del usuario
+      const chatBody = document.querySelector('.chat-body');
+      const userMessage = document.createElement('div');
+      userMessage.className = 'chat-message user';
+      userMessage.innerHTML = `<p>${userChoice}</p>`;
+      userMessage.style.background = '#3073C0';
+      userMessage.style.color = 'white';
+      userMessage.style.borderRadius = 'var(--radius-md)';
+      userMessage.style.borderBottomRightRadius = '0';
+      userMessage.style.marginTop = 'var(--spacing-md)';
+      chatBody.appendChild(userMessage);
+      
+      // Auto-scroll al fondo
+      chatBody.scrollTop = chatBody.scrollHeight;
+      
+      // Respuesta automática (simulada)
+      setTimeout(() => {
+        const botResponse = document.createElement('div');
+        botResponse.className = 'chat-message bot';
+        botResponse.innerHTML = '<p>¡Perfecto! Un agente especializado te atenderá en breve. Mientras tanto, ¿te gustaría iniciar una cotización?</p>';
+        chatBody.appendChild(botResponse);
+        chatBody.scrollTop = chatBody.scrollHeight;
+      }, 1000);
+    });
+  });
+  
+  // ==========================================================================
+  // FORMULARIO DE COTIZACIÓN RÁPIDA
+  // ==========================================================================
+  const quickQuoteForm = document.getElementById('quick-quote');
+  if (quickQuoteForm) {
+    quickQuoteForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const currentStep = this.querySelector('.step-1.active') ? 1 : 
+                         this.querySelector('.step-2[style*="display: block"]') ? 2 : 3;
+      
+      if (currentStep === 1) {
+        const email = document.getElementById('email').value;
+        if (email) {
+          this.querySelector('.step-1').style.display = 'none';
+          this.querySelector('.step-2').style.display = 'block';
+        }
+      } else if (currentStep === 2) {
+        const phone = document.getElementById('phone').value;
+        if (phone) {
+          this.querySelector('.step-2').style.display = 'none';
+          this.querySelector('.step-3').style.display = 'block';
+          
+          // Aquí enviarías los datos a tu backend
+          console.log('Lead capturado:', { email, phone });
+        }
+      }
+    });
+  }
+  
+  window.closeForm = function() {
+    const form = document.getElementById('quick-quote');
+    form.reset();
+    form.querySelector('.step-1').style.display = 'block';
+    form.querySelector('.step-2').style.display = 'none';
+    form.querySelector('.step-3').style.display = 'none';
+  };
+  
+  // ==========================================================================
+  // EFECTOS ADICIONALES DE UX
+  // ==========================================================================
+  
+  // Highlight card on hover
+  const planCards = document.querySelectorAll('.plan-card');
+  planCards.forEach(card => {
+    card.addEventListener('mouseenter', function() {
+      planCards.forEach(c => {
+        if (c !== card && !c.classList.contains('plan-featured')) {
+          c.style.opacity = '0.6';
+        }
+      });
+    });
+    
+    card.addEventListener('mouseleave', function() {
+      planCards.forEach(c => {
+        c.style.opacity = '1';
+      });
+    });
+  });
+  
+  // Smooth scroll para links internos
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href');
+      if (targetId !== '#') {
+        e.preventDefault();
+        const target = document.querySelector(targetId);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    });
+  });
+  
+  console.log('✅ Módulo de Seguros de Auto Premium cargado exitosamente');
+})();
+</script>
